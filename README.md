@@ -84,6 +84,7 @@ function updateScore(
 ) public
 
 🎨 <b>Inspiration</b>
+
 This project was inspired by:
 
 street basketball culture
@@ -92,9 +93,11 @@ decentralized applications
 interactive sports experiences
 
 📸 <b>Preview</b>
+
 A stylish Web3 basketball scoreboard interface with wallet connection, sound effects, and blockchain integration.
 
 🤝 <b>Contributing</b>
+
 Contributions, ideas, and feedback are welcome.
 Feel free to fork the project and build your own version 🚀
 
