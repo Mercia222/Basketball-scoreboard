@@ -42,40 +42,9 @@ Coinbase Wallet
 Exodus
 Trust Wallet
 
-📂<b>Project Structure</b>
 
-BasketballScoreBoard/
-│
-├── contracts/
-│   └── backetBallScore.sol
-│
-├── scripts/
-│   └── deploy.js
-│
-├── tasks/
-│   └── accounts.js
-│
-├── artifacts/
-├── cache/
-├── node_modules/
-│
-├── files/
-│   ├── metamask.png
-│   ├── coinbase.png
-│   ├── exodus.png
-│   ├── trust-wallet.png
-│   ├── basketball-sound.mp3
-│   └── score-sound.mp3
-│
-├── index.html
-├── index.css
-├── index.js
-├── hardhat.config.js
-├── package.json
-└── .env
-
-
-🚀 Getting Started
+🚀 <b>Getting Started</b>
+<br>
 1️⃣ Clone the repository
 git clone https://github.com/yourusername/BasketballScoreBoard.git
 cd BasketballScoreBoard
