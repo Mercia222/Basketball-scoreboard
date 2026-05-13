@@ -131,6 +131,6 @@ Feel free to fork the project and build your own version 🚀
 
 👩🏽‍💻 Author
 
-Built by Mercia222✨
+Built by Mercia Ravelo✨
 Blockchain Developer | Web3 Builder | Creative Technologist
 🇲🇬 Madagascar × Web3 × Innovation
