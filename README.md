@@ -88,8 +88,11 @@ function updateScore(
 This project was inspired by:
 
 street basketball culture
+
 Web3 transparency
+
 decentralized applications
+
 interactive sports experiences
 
 📸 <b>Preview</b>
