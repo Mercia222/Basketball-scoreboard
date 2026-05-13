@@ -1,0 +1,127 @@
+<head>
+
+<meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🏀 Basketball Scoreboard</title>
+    <link rel="stylesheet" href="index.css">
+       <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+                
+    </head>
+    <body>
+        <div id="walletBadge" class="wallet-badge">
+            Not connected
+          </div>
+
+        <div class="container">
+            <div class="column">
+                <h3 class="title">HOME</h3>
+                <h2 id="home-score" class="score">0</h2>
+                <button class="home-btn" onclick="increaseHomeScoreOne()">+1</button>
+                <button  class="home-btn" onclick="increaseHomeScoreTwo()">+2</button>
+                <button  class="home-btn" onclick="increaseHomeScoreThree()">+3</button>
+            </div>
+            <div class="ball">
+            <h1>🏀</h1>
+            </div>
+            <div class="column">
+                <h3 class="title">GUEST</h3>
+                <h2 id="guest-score" class="score">0</h2>
+                 <button class="guest-btn" onclick="increaseGuestScoreOne()">+1</button>
+                 <button class="guest-btn"  onclick="increaseGuestScoreTwo()">+2</button>
+                 <button class="guest-btn" onclick="increaseGuestScoreThree()">+3</button>
+            </div>
+            
+        </div>
+        
+         <div>
+                <button id="setTo0" onclick="reset()" class="resetbtn"> RESET SCORE </button>
+            </div>
+
+            <div>
+                <button id="connectWallet" class="resetbtn">CONNECT WALLET</button>
+
+                <!-- Wallet Modal -->
+                 <div id ="walletModal" class="wallet-modal">
+                 <div class="wallet-modal-content">
+
+                <h2>Select Wallet</h2>
+                <div class="wallet-options">
+                    <div class ="wallet-option" onclick="connectMetaMask()">
+                    <img src="files/metamask.png" alt="MetaMask">
+                    <span>MetaMask </span>
+                    </div>
+
+                    <div class="wallet-option" onclick="connectCoinbase()">
+                        <img src="files/coinbase.png" alt="Coinbase Wallet">
+                        <span>Coinbase</span>
+                    </div>
+                    <div class="wallet-option" onclick="connectWalletConnect()">
+                        <img src="files/exodus.png" alt="Exodus Wallet">
+                        <span>Exodus </span>
+                    </div>
+
+                      <div class="wallet-option" onclick="connectWalletConnect()">
+                        <img src="files/trust-wallet.png" alt="Trust Wallet">
+                        <span>Trust </span>
+                    </div>
+
+                
+             </div>
+              
+             <button class="close-btn" onclick="closeModal()">Close</button>
+            </div>
+         </div>
+
+<!-- WEB RECEIPT PANEL -->
+<div class="web3-panel">
+    <h2 class="web3-title">Web3 Match Receipt</h2>
+
+    <div class="web3-row">
+        <div class="web3-box">
+            <div class="web3-label"> Home Player (A)</div>
+            <div id="playerAAddr" class="web3-value"> Not signed </div>
+            <button class="web3-btn" onclick="signAsHome()">Sign as Home </button>
+        </div>
+
+        <div class="web3-box">
+            <div class="web3-label"> Guest Player (B)</div>
+            <div id="playerBAddr" class="web3-value">Not signed</div>
+            <button class="web3-btn" onclick="signAsGuest()">Sign as Guest</button>
+        </div>
+    </div>
+
+    <div class="web3-actions">
+        <button class="web3-btn" onclick="verifySignatures()">Verify Signatures </button>
+        <button class="web3-btn" onclick ="downloadReceipt()">Download Proof</button>
+        <button class="web3-btn" onclick="clearReceipts()"> Clear Saved Proofs</button>
+    </div>
+
+    <div class="receipt">
+        <div class="receipt-title">Match Proof</div>
+        <pre id="receiptText" class="receipt-pre"> No receipt yet. </pre>
+        <div class="qr-wrap">
+            <canvas id="qrCanvas" width="180" height="180"></canvas>
+            <div class="qr-hint">Scan = proof hash</div>
+        </div>
+    </div>
+</div>
+
+            <audio id="score-sound" src="files/score-sound.mp3" preload="auto"></audio>
+            <audio id="reset-sound" src="files/basketball-sound.mp3" preload="auto"></audio>
+
+           
+        <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+<script defer src="https://unpkg.com/@coinbase/wallet-sdk/dist/index.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+<script>
+    console.log("Ethers loaded?", !!window.ethers, window.ethers);
+  </script>
+  
+
+<script defer src="index.js"></script>
+
+
+
+    </body>
+</html>
